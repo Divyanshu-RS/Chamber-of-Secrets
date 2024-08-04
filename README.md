@@ -3,6 +3,7 @@
 <br>
 <p>This repository is conventional and comprises basic yet visually appealing projects related to front-end web development. An archive dedicated to #potterheds </p>
 <br>
+
 ## 1. Netflix Landing Page
    <p>Made Netflix landing page clone, using basics fundamental of Front-End Web Development </p>
    Visit the site in real time <a href="https://ottlandingpage.netlify.app/">Netflix</a>
