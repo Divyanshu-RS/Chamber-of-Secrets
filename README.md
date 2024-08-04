@@ -1,4 +1,4 @@
-# Welcome to Secrete Chamber
+# Welcome to My Chamber of Secrets
 <p align="center"><img src="https://pm1.narvii.com/6831/5e8b1024f5fee5d43f45be8ca365cda5095865d8v2_hq.jpg" width="500"/></p>
 <br>
 <p>This repository is conventional and comprises basic yet visually appealing projects related to front-end web development. An archive dedicated to #potterheds </p>
