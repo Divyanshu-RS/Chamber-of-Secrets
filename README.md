@@ -12,6 +12,6 @@
    <p>A visually appealing climate stimulation device utilizing the fundamentals of SVG creation and front-end web development.</p>
    Visit the site in real time <a href="https://climacode-by-drs.netlify.app/">Clima Code</a>
 
-   ## 2. Solar Explore
+   ## 3. Solar Explore
    <p>Solar Explore is a platform for learning about the solar system. It offers a scalable and high-performance web architecture and consists of HTML, CSS, and JavaScript. A compelling user experience through an interactive interface.</p>
    Visit the site in real time <a href="https://solar-explore-drs.netlify.app/">Clima Code</a>
