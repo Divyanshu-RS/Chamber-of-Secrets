@@ -45,38 +45,8 @@ body {
   cursor: default;
   overflow: hidden;
   height: 100%;
-  font-size: rem;
+  font-size: 5rem;
 }
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  text-align: center;
-  padding: 0.3rem;
-  z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.header.show {
-  opacity: 1;
-}
-
-.header-link {
-  color: black;
-  text-decoration: none;
-  font-size: 3rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.header-link:hover {
-  color: blue;
-  transform: scale(1.05);
-}
-
 .icon {
   display: inline-block;
   font-size: inherit;
