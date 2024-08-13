@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="author" content="Divyanshu Ranjan Singh">
+  <meta name="description" content="Solve this classic Rubil's Cube puzzle.">
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+  <title>The Cube - A Rubik's Cube Game</title>
+  <meta property="og:description" content="Solve this classic Rubil's Cube puzzle."/>
+  <meta property="og:image" content="http://res.cloudinary.com/dpu5ywrox/image/upload/v1723554830/nhxjoxpw8zpxuzf9bytq.png"/>
+  <meta property="og:site_name" content="The Cube - A Rubik's Cube Game"/>
+  <meta property="og:title" content="The Cube - A Rubik's Cube Game"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="website"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@DivyanshuRS">
+  <meta name="twitter:title" content="The Cube - A Rubik's Cube Game">
+  <meta name="twitter:image" content="http://res.cloudinary.com/dpu5ywrox/image/upload/v1723554830/nhxjoxpw8zpxuzf9bytq.png">
+  <meta name="twitter:description" content="Solve this classic Rubil's Cube puzzle.">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="The Cube">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128627708-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-128627708-1');
+  </script>
+
+  <script>
+    window.gameVersion = '0.99.2';
+  </script>
+<style>
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            text-align: center;
+            padding: 0.5rem;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out; 
+        }
+
+        .header.show {
+            opacity: 1;
+        }
+
+        .header-link {
+            color: black;
+            text-decoration: none;
+            font-size: 4rem;
+            transition: color 0.3s ease, transform 0.3s ease; 
+        }
+
+        .header-link:hover {
+            color: blue;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+<body>
+
+<header class="header show">
+        <a href="https://divyanshu0212.github.io/Divyanshu_Ranjan_Singh.github.io/" target="_blank" rel="noopener noreferrer" class="header-link">
+            <h6>Developed by Divyanshu</h6>
+        </a>
+    </header>
+
+  <div class="ui">
+
+    <div class="ui__background"></div>
+
+    <div class="ui__game"></div>
+
+    <div class="ui__texts">
+      <h1 class="text text--title">
+        <span>THE</span>
+        <span>CUBE</span>
+      </h1>
+      <div class="text text--note">
+        Double tap to start
+      </div>
+      <div class="text text--timer">
+        0:00
+      </div>
+      <div class="text text--complete">
+        <span>Complete!</span>
+      </div>
+      <div class="text text--best-time">
+        <icon trophy></icon>
+        <span>Best Time!</span>
+      </div>
+    </div>
+
+    <div class="ui__prefs">
+      <range name="size" title="Cube Size" list="2,3,4,5"></range>
+      <range name="flip" title="Flip Type" list="Swift&nbsp;,Smooth,Bounce"></range>
+      <range name="scramble" title="Scramble Length" list="20,25,30"></range>
+      <range name="fov" title="Camera Angle" list="Ortographic,Perspective"></range>
+      <range name="theme" title="Color Scheme" list="Cube,Erno,Dust,Camo,Rain"></range>
+    </div>
+
+    <div class="ui__theme">
+      <range name="hue" title="Hue" color></range>
+      <range name="saturation" title="Saturation" color></range>
+      <range name="lightness" title="Lightness" color></range>
+    </div>
+
+    <div class="ui__stats">
+      <div class="stats" name="cube-size">
+        <i>Cube:</i><b>3x3x3</b>
+      </div>
+      <div class="stats" name="total-solves">
+        <i>Total solves:</i><b>-</b>
+      </div>
+      <div class="stats" name="best-time">
+        <i>Best time:</i><b>-</b>
+      </div>
+      <div class="stats" name="worst-time">
+        <i>Worst time:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-5">
+        <i>Average of 5:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-12">
+        <i>Average of 12:</i><b>-</b>
+      </div>
+      <div class="stats" name="average-25">
+        <i>Average of 25:</i><b>-</b>
+      </div>
+    </div>
+
+    <div class="ui__buttons">
+      <button class="btn btn--bl btn--stats">
+        <icon trophy></icon>
+      </button>
+      <button class="btn btn--br btn--prefs">
+        <icon settings></icon>
+      </button>
+      <button class="btn btn--bl btn--back">
+        <icon back></icon>
+      </button>
+      <button class="btn btn--br btn--theme">
+        <icon theme></icon>
+      </button>
+      <button class="btn btn--br btn--reset">
+        <icon reset></icon>
+      </button>
+    </div>
+
+  </div>
+
+  <script src="assets/js/three.js"></script>
+  <script src="assets/js/cube.js"></script>
+
+  <script src="upup.min.js"></script>
+  <script>
+    if (UpUp !== null) {
+      UpUp.start({
+        'cache-version': window.gameVersion,
+        'content-url': 'index.html',
+        'assets': [ 'assets/css/styles.css', 'assets/js/three.js', 'assets/js/cube.js' ]
+      });
+    }
+  </script>
+
+</body>
+</html>
