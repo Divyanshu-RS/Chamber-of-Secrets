@@ -19,3 +19,8 @@
    ## 4. Calculator
    <p>A modern web-based calculator that performs basic arithmetic operations and allows users to enter digits using both the on-screen buttons and the keyboard. Built with HTML, CSS, and JavaScript, it offers a sleek design and essential features for efficient calculations. The website also includes a toggle to switch between dark and light modes.</p>
    Visit the site in real time <a href="https://calculator-by-drs.netlify.app/">Calculator</a>
+
+   ## 5. The Rubik's Cube
+   <p>A fully interactive and visually engaging Rubik's Cube simulator where users can experience solving the classic puzzle directly in their browser. Built with advanced web technologies, this project provides a seamless and realistic experience with smooth animations and intuitive controls. The game allows players to rotate, twist, and shuffle the cube in real time, offering both a fun challenge and an opportunity to enhance problem-solving skills.</p>
+   Visit the site in real time <a href="https://thecube-by-drs.netlify.app/">The Rubik's Cube</a>
+
