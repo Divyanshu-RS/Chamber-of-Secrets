@@ -24,3 +24,7 @@
    <p>A fully interactive and visually engaging Rubik's Cube simulator where users can experience solving the classic puzzle directly in their browser. Built with advanced web technologies, this project provides a seamless and realistic experience with smooth animations and intuitive controls. The game allows players to rotate, twist, and shuffle the cube in real time, offering both a fun challenge and an opportunity to enhance problem-solving skills.</p>
    Visit the site in real time <a href="https://thecube-by-drs.netlify.app/">The Rubik's Cube</a>
 
+   ## 6. Bubble Rush
+   <p>A fun and addictive bubble shooter game where players match and shoot bubbles of the same color to clear the board and score points. Built using HTML5, CSS3, and JavaScript (Three.js), this game offers responsive design and a progressive challenge.</p>
+    Visit the site in real time <a href="https://bubble-rush.netlify.app/">Bubble Rush</a>
+
